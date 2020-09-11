@@ -9,4 +9,5 @@ Bundler.require
 # and then run the app
 
 require_relative './api_calls'
+require_relative './ndc_directory_api'
 run Sinatra::Application
