@@ -2,6 +2,9 @@ get '/test' do
   "Hello World"
 end
 
-# faraday calls out to external api's
+get '/test2' do
+  params[:med_name]
+end
+
 # paths are endpoints that must match the ones in rails app
 # what the block returns is what we want to show up in rails app.

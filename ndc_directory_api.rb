@@ -1,4 +1,7 @@
 get '/med_search' do
+  # this is just an example... need to fill in with actual search code.
+  # Then we can refactor later.
+  
   med_name = params[:med_name]
 
   conn = Faraday.new('https://api.fda.gov/drug/ndc.json')
