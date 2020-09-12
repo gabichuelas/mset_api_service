@@ -1,3 +1,6 @@
-require_relative 'config/environment'
+require 'bundler'
+Bundler.require
+
+require File.expand_path('../config/environment',  __FILE__)
 
 run MsetApiService

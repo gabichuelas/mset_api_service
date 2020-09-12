@@ -1,6 +1,24 @@
-ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
+# ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
 
-require 'bundler/setup' # Set up gems listed in the Gemfile.
-
+require 'bundler'
 Bundler.require
-require './lib/app'
+
+# get the path of the root of the app
+APP_ROOT = File.expand_path("..", __dir__)
+
+# require the controller(s)
+Dir.glob(File.join(APP_ROOT, 'app', 'controllers', '*.rb')).each { |file| require file }
+
+# require the model(s)
+Dir.glob(File.join(APP_ROOT, 'app', 'models', '*.rb')).each { |file| require file }
+
+# require database configurations (we have none)
+# require File.join(APP_ROOT, 'config', 'database')
+
+# configure MsetApiService settings
+class MsetApiService < Sinatra::Base
+  set :method_override, true
+  set :root, APP_ROOT
+  set :views, File.join(APP_ROOT, "app", "views")
+  set :public_folder, File.join(APP_ROOT, "app", "public")
+end
