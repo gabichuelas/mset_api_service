@@ -70,7 +70,6 @@ DEPENDENCIES
   figaro
   json
   pry
-  rack-test
   rake
   rspec
   sinatra

@@ -9,7 +9,7 @@ gem 'figaro'
 gem 'rake'
 
 group :development, :test do
-  gem 'rack-test'
+  # gem 'rack-test'
   gem 'rspec'
   gem 'pry'
   gem 'capybara'
