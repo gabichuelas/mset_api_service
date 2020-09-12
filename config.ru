@@ -1,13 +1,3 @@
-# Set up gems listed in the Gemfile.
-require 'bundler/setup'
-Bundler.require
+require_relative 'config/environment'
 
-# would require any files needed in environment,
-# such as api keys
-
-# connect this config file to the rest of the main app
-# and then run the app
-
-require_relative './api_calls'
-require_relative './ndc_directory_api'
-run Sinatra::Application
+run MsetApiService

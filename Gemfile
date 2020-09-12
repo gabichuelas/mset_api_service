@@ -6,9 +6,12 @@ gem 'sinatra'
 gem 'json'
 gem 'faraday'
 gem 'figaro'
+gem 'rake'
 
-group :test do
+
+group :development, :test do
   gem 'rack-test'
-  gem 'rake'
+  gem 'rspec'
   gem 'pry'
+  gem 'capybara'
 end
