@@ -3,7 +3,6 @@ get '/test' do
 end
 
 get '/test2' do
-  require "pry"; binding.pry
   params[:med_name]
 end
 
