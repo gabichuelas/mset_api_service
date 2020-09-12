@@ -8,7 +8,6 @@ gem 'faraday'
 gem 'figaro'
 gem 'rake'
 
-
 group :development, :test do
   gem 'rack-test'
   gem 'rspec'
