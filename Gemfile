@@ -5,5 +5,10 @@ ruby '2.5.3'
 gem 'sinatra'
 gem 'json'
 gem 'faraday'
-gem 'pry'
 gem 'figaro'
+
+group :test do
+  gem 'rack-test'
+  gem 'rake'
+  gem 'pry'
+end
