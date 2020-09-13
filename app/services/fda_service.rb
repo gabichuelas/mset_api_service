@@ -1,8 +1,8 @@
 class FdaService
 
   def brand_name_search(params)
-    response = conn.get("drug/ndc.json?search=brand_name_base:#{params}&limit=10")
-    json_parse(response)[:results]
+    conn.get("drug/ndc.json?search=brand_name_base:#{params}&limit=10")
+    # json_parse(response)
   end
 
   private
