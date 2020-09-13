@@ -1,0 +1,13 @@
+language: ruby
+rbenv:
+- 2.5.3
+script:
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: F8NKMMkBoqcvTIqBNbtAgyYpIWujkZ1Yl7HOG/SyU1AE9ten0IpxIJg0tHgfEq5ampNltZgcEBrLRU07OdePAAam+8Rx8T55k0RNJtRSzM4L/fzF3hLUA553Y7z/KdpiUwsVc5ZTA1IYb4KjWjdfTy1CBz3EZHvZRcZEk/h2g9kPJj4gK7RmJ91Knz7wM5sS3K8yrWkPfM4Lp15ZPCeN5oSyR85ifeAuK9BpsqhakLB/8ZVwYJav4/yTbYSsjhoh1D2KCZIHsQcsA96sJH7rtmFbJpfMiJti/Tcd3BKA2aE305biktUSXMNcXcZMgviO5tNiYnqZ+yalSPHJf+beHhdv/IIg2UypNlsEqL0pM/V3zxJNIRDe+sYtw21MAbo5R0YK+dftgI3+2ThtxK3I9+paf04eNsfYya1pQh7eVfxtZNkPrF8dv3qOf2AjZGovNjaT9N4IiAtLWGzy2PS3BarZI7CI/+VEKUIwPwdNK5L+ZEDoFKup/RLJ6AgDm6Fbv2CouQkAY6W5jMr/V+VdTlBqPefHPwLsyDONdN8JVMkZgq1xq/cAAlgBoBvu1FPMg2PKhW1QRJhbGMRCyej7FBaPW0CWg4Fw+Kc6DjbQ85CRGsTBmlMwbrQ65KsV1Rsrs9qI8ShmUstPIHaLY83sx2ByOgzGsT+kXkX9LaSL9+8=
+  app: mset-api-service
+  on:
+    repo: gabichuelas/mset_api_service
+    branch: master
