@@ -1,5 +1,9 @@
 class MsetApiService < Sinatra::Base
 
+  get '/med_search' do
+    brand_name_search(params[:medication_name])
+  end
+
   ## TEST CALLS
 
   get '/' do
