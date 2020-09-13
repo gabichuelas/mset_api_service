@@ -12,6 +12,9 @@ Dir.glob(File.join(APP_ROOT, 'app', 'controllers', '*.rb')).each { |file| requir
 # require the model(s)
 Dir.glob(File.join(APP_ROOT, 'app', 'models', '*.rb')).each { |file| require file }
 
+# require the service(s)
+Dir.glob(File.join(APP_ROOT, 'app', 'services', '*.rb')).each { |file| require file }
+
 # require database configurations (we have none)
 # require File.join(APP_ROOT, 'config', 'database')
 
