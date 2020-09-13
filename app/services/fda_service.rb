@@ -10,10 +10,6 @@ class FdaService
 
   private
 
-  def json_parse(response)
-    JSON.parse(response.body, symbolize_names: true)
-  end
-
   def conn
     Faraday.new('https://api.fda.gov/')
   end
